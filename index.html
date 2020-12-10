@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="topRow">
+            <div class="icon" id="icon">
+                <img class="iconImg" id="img" src="./icons/cloudsun.png">
+           
+                <div class="temp" id="temp">
+                    <h1 class="tempText" id="tempText">5°C</h1>
+                </div>
+            </div>
+            <div class="city">
+                <h1 class="cityText" id="city">London</h1>
+                <h3 class="country" id="country">GB</h3>
+            </div>
+            <div class="desc">
+                <h2 class="descrip" id="descrip">Clouds</h2>
+                <h3 class="moreDesc" id="moreDesc">Overcast clouds</h3>
+            </div>
+            <div class="inputDiv">
+                <!-- <form> -->
+                    <input class="input" id="input" placeholder="Enter a city" required>
+                    <button class="submit" id="submit">+</button>
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
