@@ -133,6 +133,7 @@ body {
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
   padding: 1.5rem;
+  min-width: 30rem;
   background-color: rgba(255, 255, 255, 0.144);
 }
 
@@ -141,4 +142,43 @@ select,
 textarea {
   color: #ffffff;
   font-family: "Roboto", sans-serif;
+}
+
+.minMax {
+  @include flexRow();
+  margin: 0.7rem;
+  color: white;
+}
+
+#min {
+  margin-right: 2rem;
+}
+
+#max {
+  margin-left: 2rem;
+}
+
+.unitChange {
+  @include displayFlexCent();
+}
+
+.unitBtn {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.342);
+  padding: 7px;
+  border-radius: 5px;
+  text-shadow: 1px 1px 1px black;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0.1px 0.1px 50px rgb(177, 177, 177);
+  }
+}
+
+#unit {
+  margin-right: 3rem;
 }
