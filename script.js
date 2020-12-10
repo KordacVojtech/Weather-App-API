@@ -19,6 +19,11 @@ submit.onclick = async function getWeather(){
     
     const city = input.value;
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8fb5d72f02341b18384fc6fc21f551da`, {mode: 'cors'});
+    
+    if(response.status===404){
+        alert('Error: could not find city, please try again with a different city');
+    }
+
     const weatherData = await response.json();
     const cityName = weatherData.name
     const country = weatherData.sys.country;
@@ -30,6 +35,8 @@ submit.onclick = async function getWeather(){
     const minTextCels = Math.round(minTextKelv - 273.15);
     const maxTextKelv = weatherData.main.temp_max;
     const maxTextCels = Math.round(maxTextKelv-273.15);
+
+
 
 
     input.value = '';
