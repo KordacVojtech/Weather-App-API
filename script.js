@@ -14,7 +14,7 @@ submit.onclick = async function getWeather(){
 
     
     const city = input.value;
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8fb5d72f02341b18384fc6fc21f551da`, {mode: 'cors'});
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8fb5d72f02341b18384fc6fc21f551da`, {mode: 'cors'});
     const weatherData = await response.json();
     const cityName = weatherData.name
     console.log(cityName);
@@ -37,6 +37,7 @@ submit.onclick = async function getWeather(){
         tempText.textContent = cels + '°C';
         determineIcon();
     }
+
 
     function determineIcon(){
         if(weatherStatus ==='Clear'){
@@ -77,6 +78,8 @@ submit.onclick = async function getWeather(){
             document.body.style.backgroundRepeat = 'no-repeat';
         }
     }
+
+    
 
     appendToPage();
     
